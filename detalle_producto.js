@@ -108,3 +108,32 @@ closeModal.addEventListener("click", () => {
     const modal = document.getElementById("imageModal");
     modal.style.display = "none"; // Cerrar la modal
 });
+
+// Seleccionar elementos
+const paymentModal = document.getElementById('paymentModal');
+const openPaymentModalButton = document.getElementById('openPaymentModal');
+const closePaymentModalButton = document.querySelector('#paymentModal .close');
+const closePaymentButton = document.getElementById('closePayment');
+
+// Abrir el modal
+openPaymentModalButton.addEventListener('click', () => {
+    paymentModal.style.display = 'flex';
+    
+});
+
+// Cerrar el modal con el botón de cerrar
+closePaymentModalButton.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+});
+
+// Cerrar el modal con el botón "Cerrar"
+closePaymentButton.addEventListener('click', () => {
+    paymentModal.style.display = 'none';
+});
+
+// Cerrar el modal al hacer clic fuera del contenido
+window.addEventListener('click', (event) => {
+    if (event.target === paymentModal) {
+        paymentModal.style.display = 'none';
+    }
+});

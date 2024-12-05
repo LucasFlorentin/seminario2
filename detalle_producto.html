@@ -9,24 +9,26 @@
 <body>
     <div class="product-detail">
         <h2 id="productTitle">Detalle del Producto</h2>
-        <div id="productContent">
-            
-        </div>
+        <div id="productContent"></div>
         <h2><a href="productos.html" class="back-link">Volver al catálogo</a></h2>
     </div>
-    <!-- Modal para mostrar la imagen ampliada -->
-    <div id="imageModal" class="modal">
+
+    <!-- Modal para método de pago -->
+    <div id="paymentModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img id="modalImage" src="" alt="Imagen Ampliada">
-            <div id="modalDescription"></div> <!-- Aquí se insertará la lista -->
+            <h3>Selecciona tu método de pago</h3>
+            <ul>
+                <li>Tarjetas de débito</li>
+                <li>Tarjetas de crédito</li>
+                <li>Billeteras digitales</li>
+            </ul>
+            <button id="closePayment">Cerrar</button>
         </div>
     </div>
-    
 
-    <script src="detalle_producto.js"></script>
-</body>
+    <button id="openPaymentModal">Seleccionar método de pago</button>
+
     <script src="detalle_producto.js"></script>
 </body>
 </html>
-
